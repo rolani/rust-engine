@@ -1,4 +1,4 @@
-name: Rustfmt
+name: Rust formatting
 
 on: [push, pull_request]
 
