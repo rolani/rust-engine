@@ -1,14 +1,29 @@
 // test all functions in lib
 
-use webapp::mult;
 use webapp::add;
-use webapp::sub;
 use webapp::div;
+use webapp::mult;
+use webapp::sub;
 
-fn main(){
-    println!("Starting Tests");
-    println!("mult(6,3) = {}", mult(6,3));
-    println!("add(6,3) = {}", add(6,3));
-    println!("sub(6,3) = {}", sub(6,3));
-    println!("div(6,3) = {}", div(6,3));
+#[test]
+fn test_mult(){
+    assert_eq!(mult(6, 3), 18);
+}
+
+
+#[test]
+fn test_add(){
+    assert_eq!(add(6, 3), 9);
+}
+
+
+#[test]
+fn test_sub(){
+    assert_eq!(sub(6, 3), 3);
+}
+
+
+#[test]
+fn test_div(){
+    assert_eq!(div(6, 3), 2);
 }
